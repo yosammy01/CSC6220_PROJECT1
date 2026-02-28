@@ -3,16 +3,92 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>CSC6220_Computer_Networking_Project_1</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>CSC6220 Computer Networking: Project 1</h1>
-        <h2></h2>Team: Samuel Robles</h2>
-        <p>
-            <a href="/about">About Me</a>
-        </p>
-        <p>
-            <a href="/networking">Networking Concepts</a>
-        </p>
+
+        <main> 
+            <div id="home" class="page-section">
+                <h1>CSC6220 Computer Networking: Project 1</h1>
+                <h2>Team (Graduate Student):</h2>
+                <img src="GSU_ID.png" alt="Samuel Robles" class="profile-pic">
+                <p>
+                    <!-- These links call the JavaScript function to change pages -->
+                    <a href="#" onclick="navigateTo('about'); return false;">About</a>
+                </p>
+                <p>
+                    <a href="#" onclick="navigateTo('networking'); return false;">Networking Concepts</a>
+                </p>
+            </div>
+
+            <div id="about" class="page-section page-hidden">
+                <p>
+                    <!-- A link to go back to the home page -->
+                    <a href="#" onclick="navigateTo('home'); return false;">Back to Home</a>
+                </p>
+                <h1>About/Contact</h1>
+                <h2><b><u>Education</b></u></h2>
+                <p>B.S. Electrical Engineering and Computer Science, May 2007</p>
+                <p>University of California – Berkeley, CA.</p>
+                </br>
+                <p>M.S. Computer Science, In Progress</p>
+                <p>Georgia State University – Atlanta, GA</p>
+                <p>Expected Graduation: June 2027</p>
+                <h1><b><u>Experience</b></u></h1>
+                <p>NCR Voyix (2017–2024)</p>
+                <p>Software Engineer II</p>
+                </br>
+                <p>Omnico Group (2015– 2016)</p>
+                <p>Software Engineer</p>
+                </br>
+                <p>NCR Corporation (2007–2014)</p>
+                <p>Software Engineer II</p>        
+                <h1><b><u>Contact</b></u></h1>
+                <p>E-Mail: srobles5@student.gsu.edu</p>
+                <p>Phone: 770-765-0413</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/samuel-robles-195b219b/">https://www.linkedin.com/in/samuel-robles-195b219b/</a></p>
+                <p>GitHub: <a href="https://github.com/yosammy01">https://github.com/yosammy01</a></p>
+            </div>
+
+            <div id="networking" class="page-section page-hidden">
+                <p>
+                    <!-- A link to go back to the home page -->
+                    <a href="#" onclick="navigateTo('home'); return false;">Back to Home</a>
+                </p>
+                <h1>Networking Concepts</h1>
+                <h2>• DNS</h2>
+                <p>Domain resolution (nslookup or dig)</p>
+                <h2>• IP Addressing</h2>
+                <p>IPv4 / IPv6 resolution</p>
+                <h2>• Protocols</h2>
+                <p>HTTP vs HTTPS, headers, status codes</p>
+            </div>
+            
+        </main>
+
+        <!-- The JavaScript Navigation Logic -->
+        <script>
+            function navigateTo(pageId) {
+                // 1. Get all elements that act as pages
+                const pages = document.querySelectorAll('.page-section');
+                
+                // 2. Hide all of them by adding the 'page-hidden' class
+                pages.forEach(page => {
+                    page.classList.add('page-hidden');
+                });
+                
+                // 3. Find the specific page we want to show and remove the hidden class
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('page-hidden');
+                }
+                
+                // Optional: Scroll to the top when navigating
+                window.scrollTo(0, 0);
+            }
+        </script>
+
     </body>
 </html>
+

@@ -1,0 +1,60 @@
+/* A simple class to hide our inactive pages */
+.page-hidden {
+    display: none;
+}
+
+:root {
+  --gsu-blue: #0039A6; /* Primary GSU Blue */
+  --gsu-red-accent: #CC0000; /* Secondary Red Accent */
+  --gsu-blue-steel: #374057; /* Secondary Blue Steel */
+  --gsu-cool-blue: #0071CE; /* Secondary Cool Blue */
+  --gsu-vibrant-blue: #00AEEF; /* Secondary Vibrant Blue */
+  --gsu-light-gray: #EEEEEE; /* Secondary Light Gray */
+  --gsu-medium-gray: #CCCCCC; /* Secondary Medium Gray */
+  --gsu-dark-gray: #767679; /* Secondary Dark Gray */
+  --gsu-black: #000000; /* Black for headings */
+  --gsu-white: #FFFFFF; /* Primary White */
+}
+
+body {
+  font-family: 'Lato', sans-serif; /* Primary web font is Lato */
+  color: var(--gsu-black);
+  background-color: var(--gsu-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Headings should only be black or GSU Blue */
+  color: var(--gsu-black); 
+  font-family: 'Lato', serif;
+}
+
+h1 {
+  font-weight: 300; /* Lato Light for H1 headings */
+  color: var(--gsu-blue); 
+}
+
+h2 {
+  font-weight: 400; /* Regular Lato for H2 subheadings */
+}
+
+/* For secondary title fonts (like marquees/highlight rows), use Oswald */
+.secondary-title {
+  font-family: 'Oswald', sans-serif; 
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--gsu-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Example: Styling a header/navigation bar to reflect branding */
+.main-header {
+  background-color: var(--gsu-blue);
+  color: var(--gsu-white);
+  padding: 10px 0;
+}
