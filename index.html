@@ -59,55 +59,57 @@
                 <h1>Networking Concepts</h1>
                 <h2>• DNS (Domain Name System) Resolution - How does Domain resolve to IP Address?</h2>
                 <pre>
-1. This web site is hosted on GitHub Pages with domain name "yosammy01.github.io"
-2. The browser first checks its own local memory for the GitHub Pages domain.
-3. If still needed, the computer asks the Internet Service Provider's DNS server.
-4. If still needed, the ISP asks a global Root Server.
-5. The Root Server uses the very end of the domain (.io) and directs the ISP to the .io Top-Level Domain (TLD) server.
-6. The TLD server uses the next part of your domain (github) and directs the ISP to the Authoritative Name Server (ANS) for GitHub Pages.
-7. The ANS uses the full domain name (yosammy01.github.io) and returns the IP address for that domain to the ISP.
-8. The ISP returns the IP address to the browser and it can now connect to the domain (yosammy01.github.io) using that IP address.
----------------------------------------------
-C:\Users\samue>nslookup yosammy01.github.io
-Server:  UnKnown
-Address:  2600:1702:8755:4e10::1
+    1. This web site is hosted on GitHub Pages with domain name "yosammy01.github.io"
+    2. The browser first checks its own local memory for the GitHub Pages domain.
+    3. If still needed, the computer asks the Internet Service Provider's DNS server.
+    4. If still needed, the ISP asks a global Root Server.
+    5. The Root Server uses the very end of the domain (.io) and directs the ISP to the .io Top-Level Domain (TLD) server.
+    6. The TLD server uses the next part of your domain (github) and directs the ISP to the Authoritative Name Server (ANS) for GitHub Pages.
+    7. The ANS uses the full domain name (yosammy01.github.io) and returns the IP address for that domain to the ISP.
+    8. The ISP returns the IP address to the browser and it can now connect to the domain (yosammy01.github.io) using that IP address.
 
-Non-authoritative answer:
-Name:    yosammy01.github.io
-Addresses:  2606:50c0:8000::153
-          2606:50c0:8003::153
-          2606:50c0:8002::153
-          2606:50c0:8001::153
-          185.199.111.153
-          185.199.110.153
-          185.199.109.153
-          185.199.108.153
----------------------------------------------
+        ---------------------------------------------
+        C:\Users\samue>nslookup yosammy01.github.io
+        Server:  UnKnown
+        Address:  2600:1702:8755:4e10::1
+
+        Non-authoritative answer:
+        Name:    yosammy01.github.io
+        Addresses:  2606:50c0:8000::153
+                2606:50c0:8003::153
+                2606:50c0:8002::153
+                2606:50c0:8001::153
+                185.199.111.153
+                185.199.110.153
+                185.199.109.153
+                185.199.108.153
+        ---------------------------------------------
                 </pre>
                 <h2>• IP Addressing (IPv4 / IPv6) Resolution</h2>
                 <pre>
-1. Using the ping command, we can see that the domain "yosammy01.github.io" resolves to the IPv6 address "2606:50c0:8003::153".
---------------------------------------------------------------------------                    
-C:\Users\samue>ping yosammy01.github.io
+    1. Using the ping command, we can see that the domain "yosammy01.github.io" resolves to the IPv6 address "2606:50c0:8003::153".
 
-Pinging yosammy01.github.io [2606:50c0:8003::153] with 32 bytes of data:
-Reply from 2606:50c0:8003::153: time=12ms
-Reply from 2606:50c0:8003::153: time=10ms
-Reply from 2606:50c0:8003::153: time=11ms
-Reply from 2606:50c0:8003::153: time=9ms
---------------------------------------------------------------------------
+        --------------------------------------------------------------------------                    
+        C:\Users\samue>ping yosammy01.github.io
+
+        Pinging yosammy01.github.io [2606:50c0:8003::153] with 32 bytes of data:
+        Reply from 2606:50c0:8003::153: time=12ms
+        Reply from 2606:50c0:8003::153: time=10ms
+        Reply from 2606:50c0:8003::153: time=11ms
+        Reply from 2606:50c0:8003::153: time=9ms
+        --------------------------------------------------------------------------
                 </pre>
                 <h2>• Protocols (HTTP vs HTTPS, headers, status codes)</h2>
                 <pre>
-1. This web site requires HTTPS protocol to be hosted on GitHub Pages, which means that the communication between the browser and the server
-   is encrypted using SSL/TLS. This can be verified by the "https://" prefix in the Request URL.
-2. When navigating to the site, the server returns a 200 OK status code. This indicates that the client's request was successfully received, 
-   understood, and processed, and that the server has successfully delivered the requested index.html file.
-3. The HTTP headers for the request and response can be viewed in the browser's developer tools.
-   a. The request headers include information such as the User-Agent (identifies the browser) and Accept (specifies the types of content 
-   the client can process). 
-   b. The response headers include information such as Content-Type (indicates the type of content being returned), Content-Length (indicates 
-   the size of the response body), and Server (which identifies the server software).
+    1. This web site requires HTTPS protocol to be hosted on GitHub Pages, which means that the communication between the browser and the server
+       is encrypted using SSL/TLS. This can be verified by the "https://" prefix in the Request URL.
+    2. When navigating to the site, the server returns a 200 OK status code. This indicates that the client's request was successfully received, 
+       understood, and processed, and that the server has successfully delivered the requested index.html file.
+    3. The HTTP headers for the request and response can be viewed in the browser's developer tools.
+       a. The request headers include information such as the User-Agent (identifies the browser) and Accept (specifies the types of content 
+          the client can process). 
+       b. The response headers include information such as Content-Type (indicates the type of content being returned), Content-Length (indicates 
+          the size of the response body), and Server (which identifies the server software).
                 </pre>
                 <p><img src="General_Header.png" alt="General" class="profile-pic"></p>
                 <p><img src="Request_Header.png" alt="Request" class="profile-pic"></p>
