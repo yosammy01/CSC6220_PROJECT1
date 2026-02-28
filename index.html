@@ -99,9 +99,16 @@ Reply from 2606:50c0:8003::153: time=9ms
                 </pre>
                 <h2>• Protocols (HTTP vs HTTPS, headers, status codes)</h2>
                 <pre>
-1. This web site requires HTTPS protocol to be hosted on GitHub Pages, which means that the communication between the browser and the server is encrypted using SSL/TLS. This can be verified by the "https://" prefix in the Request URL.
-2. When navigating to the site, the server returns a 200 OK status code. This indicates that the client's request was successfully received, understood, and processed, and that the server has successfully delivered the requested index.html file. When refreshing the site, the server returns a 304 Not Modified status code. This indicates that the client's cached version of the index.html file is still valid and has not been modified since the last request, so the server does not need to resend the file.
-3. The HTTP headers for the request and response can be viewed in the browser's developer tools. The request headers include information such as the User-Agent (which identifies the browser), Accept (which specifies the types of content the client can process), and Host (which specifies the domain being requested). The response headers include information such as Content-Type (which indicates the type of content being returned), Content-Length (which indicates the size of the response body), and Server (which identifies the server software).
+1. This web site requires HTTPS protocol to be hosted on GitHub Pages, which means that the communication between the browser and the server
+ is encrypted using SSL/TLS. This can be verified by the "https://" prefix in the Request URL.
+2. When navigating to the site, the server returns a 200 OK status code. This indicates that the client's request was successfully received, 
+understood, and processed, and that the server has successfully delivered the requested index.html file. When refreshing the site, the server 
+returns a 304 Not Modified status code. This indicates that the client's cached version of the index.html file is still valid and has not been 
+modified since the last request, so the server does not need to resend the file.
+3. The HTTP headers for the request and response can be viewed in the browser's developer tools. The request headers include information such 
+as the User-Agent (which identifies the browser), Accept (which specifies the types of content the client can process), and Host (which specifies 
+the domain being requested). The response headers include information such as Content-Type (which indicates the type of content being returned), 
+Content-Length (which indicates the size of the response body), and Server (which identifies the server software).
                 </pre>
                 <p><img src="General_Header.png" alt="General" class="profile-pic"></p>
                 <p><img src="Request_Header.png" alt="Request" class="profile-pic"></p>
